@@ -1,6 +1,7 @@
 package org.weaver.java.messanger;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
@@ -21,5 +22,11 @@ public class MyResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String getIt() {
         return "Got it good!";
+    }
+    
+    @POST
+    @Produces(MediaType.APPLICATION_ATOM_XML)
+    public String doIt() {
+    	return "Okay gotcha!";
     }
 }
